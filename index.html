@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriple - Cryptos Made Simple</title>
+    <meta name="description" content="Kriple is a modern cryptocurrency payment API for merchants. Accept USDC, USDT, SOL, ETH, and more across Solana, Ethereum, Polygon, Avalanche, and BNB Chain.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.294.0/font/lucide.min.css">
+    
+    <!--==== Rivedere la favicon perchè così è sbagliata ====-->
+    <link rel="icon" href="icons/icon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- ===== Cookie Consent Banner (Cookiebot-ready) ===== -->
+    <!-- To activate: replace this placeholder with the Cookiebot script tag from your Cookiebot account -->
+    <!-- <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="YOUR-COOKIEBOT-ID" type="text/javascript" async></script> -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent">
+        <p class="cookie-text">
+            We use cookies to improve your experience. By continuing you agree to our 
+            <a href="pages/privacy.html">Privacy Policy</a>.
+        </p>
+        <div class="cookie-actions">
+            <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Accept</button>
+            <button class="cookie-btn cookie-decline" onclick="declineCookies()">Decline</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="nav-brand">Kriple</a>
+        <ul class="nav-links">
+            <li><a href="#features">features</a></li>
+            <li><a href="#security">security</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#waitlist" class="btn-buy">GET STARTED ↗</a></li>
+        </ul>
+        <button class="mobile-menu" id="mobileMenu" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <!-- Crypto coin particles background -->
+        <div class="hero-coins" aria-hidden="true">
+            <span class="coin coin-btc">₿</span>
+            <span class="coin coin-eth">Ξ</span>
+            <span class="coin coin-sol">◎</span>
+            <span class="coin coin-usdc">$</span>
+            <span class="coin coin-matic">⬡</span>
+            <span class="coin coin-bnb">♦</span>
+            <span class="coin coin-avax">▲</span>
+            <span class="coin coin-btc2">₿</span>
+            <span class="coin coin-eth2">Ξ</span>
+            <span class="coin coin-sol2">◎</span>
+            <span class="coin coin-usdt">₮</span>
+            <span class="coin coin-link">⬡</span>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="hero-char">K</span><span class="hero-char">r</span><span class="hero-char">i</span><span class="hero-char">p</span><span class="hero-char">l</span><span class="hero-char">e</span>
+            </h1>
+            <a href="#waitlist" class="hero-cta">Cryptos made simple ↴<span>kriple.com</span></a>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <p class="intro-text">
+                Welcome to Kriple: a seamless payment experience, where digital wallets and complicated set-ups are a thing of the past. 
+                Here starts the future. 
+                Choose Kriple: you invest, we‘ll take care of the rest.
+            </p>
+        </div>
+    </section>
+
+    <!-- Origin Story Section -->
+    <section class="origin">
+        <div class="container">
+            <a href="pages/about.html" class="section-label origin-link">The story behind Kriple ↗</a>
+            <button class="bypass-btn">Skip to features</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="design" id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-description">
+                Kriple comes with everything you need to accept cryptocurrency payments. 
+                Our dashboard gives you complete visibility over every on-chain transaction, 
+                while our API lets you build custom integrations for any platform. 
+                It’s the Crypto made simple.
+            </p>
+
+            <div class="design-showcase">
+                <div class="showcase-display">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                            </div>
+                            <h3>Multi-Chain Support</h3>
+                            <p>Accept SOL, ETH, USDC, USDT and more across Solana, Ethereum, Polygon, Avalanche, and BNB Chain.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                            </div>
+                            <h3>Hosted Checkout</h3>
+                            <p>Ready-made checkout pages with QR codes and mobile wallet deeplinks — zero front-end work required.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                            </div>
+                            <h3>Real-time Analytics</h3>
+                            <p>Track revenue, refunds, and customer insights with live on-chain data powered by CoinGecko.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+                            </div>
+                            <h3>Smart Invoicing</h3>
+                            <p>Generate and send professional invoices automatically with EU VAT and e-invoice support.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
+                            </div>
+                            <h3>Recurring Billing</h3>
+                            <p>Set up crypto subscriptions with on-chain smart contract support on Solana and EVM chains.</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                            </div>
+                            <h3>API & Integrations</h3>
+                            <p>RESTful API with webhooks, WooCommerce plugin, Shopify app, and SDK for custom integrations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why + Security wrapper -->
+    <div class="why-security-wrap">
+
+        <!-- Why Kriple Section -->
+        <section class="why-section" id="why-section">
+            <!-- Crypto coin particles background -->
+            <div class="hero-coins" aria-hidden="true">
+                <span class="coin coin-btc">₿</span>
+                <span class="coin coin-eth">Ξ</span>
+                <span class="coin coin-sol">◎</span>
+                <span class="coin coin-usdc">$</span>
+                <span class="coin coin-matic">⬡</span>
+                <span class="coin coin-bnb">♦</span>
+                <span class="coin coin-avax">▲</span>
+                <span class="coin coin-btc2">₿</span>
+                <span class="coin coin-eth2">Ξ</span>
+                <span class="coin coin-sol2">◎</span>
+                <span class="coin coin-usdt">₮</span>
+                <span class="coin coin-link">⬡</span>
+            </div>
+            <div class="container">
+                <h2 class="section-title">Why choose Kriple?</h2>
+                <p class="section-description">
+                    We built Kriple because accepting crypto should be as simple as accepting a card. 
+                    Merchants deserve full payment amounts — no platform fees skimmed per transaction. 
+                    Our model is a flat monthly subscription so you always know your costs. 
+                    Fast, transparent, and designed to scale with your business.
+                </p>
+            </div>
+        </section>
+
+        <!-- Security Section -->
+        <section class="whitespace-section" id="security">
+        <div class="container">
+            <h2 class="section-title">Security isn't optional. It's foundational.</h2>
+            <p class="section-description">
+                Every transaction flows through bank-grade AES encryption. KYC powered by SumSub 
+                for merchant compliance. Two-factor authentication with TOTP for every admin account. 
+                Blockchain verification and signature-protected webhooks on every payment event.
+            </p>
+            <p class="section-description security-crypto-note">
+                Crypto payments are inherently private by design — your wallet address is linked only 
+                to the transaction, never to a personal identity. Kriple respects and preserves this 
+                privacy-first nature of blockchain: we never expose or sell on-chain activity data.
+            </p>
+        </div>
+        </section>
+
+    </div><!-- end .why-security-wrap -->
+
+    <!-- Stats Section -->
+    <section class="duplex-section">
+        <div class="container">
+            <h2 class="section-title">Built for merchants worldwide</h2>
+            <p class="section-description">
+                From solo entrepreneurs to growing e-commerce businesses, merchants around the world 
+                use Kriple to accept crypto with confidence. Our infrastructure monitors blockchain 
+                events in real time and instant on-chain settlement.
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Blockchains supported</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Tokens accepted</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Multi-Chain Expansion</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Additional Token Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section class="roadmap-section" id="roadmap">
+        <div class="container">
+            <h2 class="section-title">Roadmap</h2>
+            <p class="section-description">
+                We're constantly expanding Kriple. Here's what we've shipped and what's coming next on our journey to become the go-to crypto payment layer for merchants.
+            </p>
+
+            <div class="timeline">
+                <div class="timeline-progress">
+                    <div class="timeline-progress-bar"></div>
+                    <div class="timeline-ball" id="timelineBall"></div>
+                </div>
+
+                <div class="timeline-item completed" data-index="0">
+                    <div class="timeline-marker">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Q1 2026</span>
+                            <span class="timeline-status done">Shipped</span>
+                        </div>
+                        <h3>Core Development</h3>
+                        <p>Core crypto payment processing, hosted checkout, merchant dashboard, and REST API.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item completed" data-index="1">
+                    <div class="timeline-marker">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Q2 2026</span>
+                            <span class="timeline-status done">Shipped</span>
+                        </div>
+                        <h3>API v2 & Integrations</h3>
+                        <p>Key features designed - RESTful API v2, webhooks, KYC and Recurring Payments Setup.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item active" data-index="2">
+                    <div class="timeline-marker">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" fill="currentColor"/></svg>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Q3 2026</span>
+                            <span class="timeline-status active-status">In Progress</span>
+                        </div>
+                        <h3>Beta Testing</h3>
+                        <p>Closed beta - Refining stability, security, and performance.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-index="3">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Q4 2026</span>
+                            <span class="timeline-status upcoming">Upcoming</span>
+                        </div>
+                        <h3>Fundraising</h3>
+                        <p>Opening our first investment round to complete the product, secure legal compliance, and fund our go-to-market strategy.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-index="5">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Q2 2027</span>
+                            <span class="timeline-status upcoming">Upcoming</span>
+                        </div>
+                        <h3>Launch</h3>
+                        <p>Full API release, merchant onboarding, and go-to-market across Europe.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-index="5">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Q2 2027</span>
+                            <span class="timeline-status upcoming">Upcoming</span>
+                        </div>
+                        <h3>Platforms Plugins</h3>
+                        <p>"One-click crypto payments for Shopify and WooCommerce. No code required."</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-index="4">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Q1 2027</span>
+                            <span class="timeline-status upcoming">Upcoming</span>
+                        </div>
+                        <h3>More Chains & Tokens</h3>
+                        <p>Expanding to Ethereum, Polygon, Avalanche, BNB Chain, Bitcoin Lightning, and additional stablecoins.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="instagram-section">
+        <div class="container">
+            <a href="#" class="instagram-link">FOLLOW OUR JOURNEY<br><span>@kriple_io</span></a>
+            <p class="instagram-text">
+                Stay updated with product launches, blockchain integrations, and tips for growing your crypto business. 
+                Follow <a href="#">@kriple_io</a> for the latest news and behind-the-scenes updates.
+            </p>
+        </div>
+    </section>
+
+    <!-- Waitlist / CTA Section -->
+    <section class="licensing-section" id="waitlist">
+        <div class="container">
+            <h2 class="section-title">Be the first to launch with Kriple.</h2>
+            <p class="waitlist-subtitle">Join the early access list — get notified when we open registrations and secure your spot before launch.</p>
+
+            <!-- Email marketing form — replace action URL with your provider endpoint -->
+            <!-- Mailchimp: action="https://yourlist.us1.list-manage.com/subscribe/post?u=XXX&id=XXX" -->
+            <!-- Formspree:  action="https://formspree.io/f/YOUR_ID" -->
+            <!-- ConvertKit: use their JS embed snippet below the form -->
+            <form class="waitlist-form" action="#" method="POST" id="waitlistForm">
+                <div class="waitlist-fields">
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your name"
+                        class="waitlist-input"
+                        required
+                        autocomplete="name"
+                    >
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Work email address"
+                        class="waitlist-input"
+                        required
+                        autocomplete="email"
+                    >
+                    <button type="submit" class="btn-buy-large waitlist-submit">Join Waitlist ↗</button>
+                </div>
+                <p class="waitlist-note">No spam. Unsubscribe at any time.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-credits">
+                    <a href="pages/about.html">About Kriple ↗</a>
+                </div>
+                <div class="footer-legal">
+                    <a href="pages/privacy.html">Privacy Policy ↗</a>
+                    <span>•</span>
+                    <a href="pages/terms.html">Terms of Service ↗</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
