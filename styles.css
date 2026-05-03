@@ -1259,8 +1259,11 @@ a {
 .cookie-banner {
     position: fixed;
     bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
+    /*left: 50%;
+    transform: translateX(-50%);*/
+    left: 0;
+    right: 0;
+    margin-inline: auto;
     z-index: 9999;
     background: var(--bg-dark);
     color: var(--bg-primary);
