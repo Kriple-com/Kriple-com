@@ -349,16 +349,33 @@ if (cookieBanner) {
 // ===== Waitlist Form =====
 const waitlistForm = document.getElementById('waitlistForm');
 if (waitlistForm) {
-    waitlistForm.addEventListener('submit', function (e) {
-        // When you connect a real provider (Mailchimp, Formspree, etc.),
-        // remove the e.preventDefault() and set the correct action URL on the form.
-        e.preventDefault();
-        const btn = waitlistForm.querySelector('.waitlist-submit');
-        btn.textContent = 'You\'re on the list! ✓';
+  waitlistForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const btn = waitlistForm.querySelector('.waitlist-submit');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(waitlistForm.action, {
+        method: 'POST',
+        body: new FormData(waitlistForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        btn.textContent = "You're on the list! ✓";
         btn.style.background = '#16425b';
-        btn.disabled = true;
         waitlistForm.querySelectorAll('.waitlist-input').forEach(i => i.disabled = true);
-    });
+      } else {
+        btn.textContent = 'Something went wrong. Try again.';
+        btn.disabled = false;
+      }
+    } catch (err) {
+      btn.textContent = 'Network error. Try again.';
+      btn.disabled = false;
+    }
+  });
 }
 
 
